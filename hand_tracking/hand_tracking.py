@@ -33,4 +33,6 @@ while True:
     cv2.putText(img, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
     cv2.imshow("Hand Tracking", img)
-    cv2.waitKey(1)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
